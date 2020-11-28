@@ -1,36 +1,45 @@
-const path = require("path");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 module.exports = {
-    entry: "./src/js/index.js",
+    entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js"
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'main.js'
     },
-    resolve: {
-        extensions: ['.js']
+    resolve:{
+        extensions:['.js']
     },
-    devServer: {
-        contentBase: path.join(__dirname, "dist"),
-        compress: true,
-        port: 9000,
-    },
-    module: {
-        rules: [
+    node: {
+        fs: 'empty',
+        tls: 'empty',
+        net: 'empty'
+      },
+      
+    module:{
+        rules:[
             {
-                test: /\,js?$/,
+                test:/\.js?$/,
                 exclude: /node_modules/,
-            }
-        ],
+                use:{
+                    loader: 'babel-loader'
+                }
+            }]
     },
-
-    plugins: [
-        new HtmlWebpackPlugin([
+    plugins:[
+        new HtmlWebPackPlugin(
             {
-                inject: true,
-                template: "./index.html",
-                filename: "./index.html",
+                inject:true,
+                template: './public/index.html',
+                filename: './index.html',
             }
-        ]),
-    ],
-};
+        ),
+        new CopyWebpackPlugin({
+            patterns: 
+            [{from: './src/styles/estilos.css',
+            to: ''}]
+        })
+    ]
+}
