@@ -8,13 +8,13 @@
 }
 
 body {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 /* Estilos del header */
 
 .header {
-    background-color: white;
+  background-color: white;
   display: flex;
   height: 50px;
   justify-content: center;
@@ -81,69 +81,69 @@ body {
 /* Estilo de los recuadros de los productos  */
 
 .cards {
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-    margin-top: 10px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: auto;
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin-top: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
-.cards__card{
-    display: flex;
-    width: 250px;
-    height: 450px;
-    background-color: white;
-    flex-wrap: wrap;
-    box-shadow: 0px 0px 32px -10px rgba(0,0,0,0.79);
-    margin-bottom: 10px;
-    
+.cards__card {
+  display: flex;
+  width: 250px;
+  height: 450px;
+  background-color: white;
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 32px -10px rgba(0, 0, 0, 0.79);
+  margin-bottom: 10px;
 }
 
 .cards__title {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #F4F4F4;
-   font-size: 1.1em;
-    color: gray;
-    width: 100%;
-    
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 1.1em;
+  color: gray;
+  width: 100%;
 }
 
-.cards__image{
-    width: 100%;  
+.cards__image {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
 }
 
-.cards__image img{
-    width: 100%;
+.cards__image img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .cards__price {
-    display: flex;
-    width: 60%;
-    align-items: center;
-    padding-left: 20px;
-    font-size: 1.1em;
-    color: gray;
+  display: flex;
+  width: 60%;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 1.1em;
+  color: gray;
 }
 .cards__add {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    background-color: gray;
-    border-radius: 50%;
-    margin: auto;
-    
-} 
-
-.cards__addicon{
-    font-size: 20px;
-    color: white;
-    font-weight: 600;
-    padding-right: 3px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 50%;
+  margin: auto;
 }
 
-
+.cards__addicon {
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+  padding-right: 3px;
+}
