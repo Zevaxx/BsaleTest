@@ -1,14 +1,13 @@
+
 const resolveRoutes = (route) => {
-  
   if (route === '/') {
-    let validRoute = '/';
+    const validRoute = '/';
     return validRoute;
-  }else if (route && route.substring(0,7) == 'search='){
-    let validRoute = '/search';
+  } else if (route && route.substring(0, 7) == 'search=') {
+    const validRoute = '/search';
     return validRoute;
-    
   }
-  return `/`;
+  return '/';
 };
 
 export default resolveRoutes;

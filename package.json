@@ -5,18 +5,22 @@
   "main": "/index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode development"
   },
   "author": "Zevaxx <sebastian88@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.3.0",
     "html-webpack-plugin": "^4.5.0",
+    "semistandard": "^16.0.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },"eslintConfig": {
+    "extends": [
+      "./node_modules/semistandard/eslintrc.json"
+    ]
   }
 }

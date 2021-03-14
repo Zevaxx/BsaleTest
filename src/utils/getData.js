@@ -8,7 +8,7 @@ const getData = async (id) => {
     return data;
   } catch (error) {
     console.log('Fetch Error', error);
-  };
+  }
 };
 
 export default getData;
