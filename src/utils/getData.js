@@ -1,7 +1,8 @@
-const API = 'https://bsaletestzevaxx.herokuapp.com/api/productos/';
+const API = 'http://localhost:3000/api/productos/';
 
 const getData = async (id) => {
   const apiURl = id ? `${API}${id}` : API;
+
   try {
     const response = await fetch(apiURl);
     const data = await response.json();

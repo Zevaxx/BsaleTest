@@ -2,9 +2,8 @@ import getData from '../utils/getData';
 import getHash from '../utils/getHash';
 
 const Search = async () => {
-  const busqueda = getHash();  
-   const productos = await getData(`/search?${busqueda}`);
-  debugger
+  const busqueda = getHash();
+  const productos = await getData(`/search?${busqueda}`);
   const view = `
     ${productos.map(producto => `
     <div class="cards__card">

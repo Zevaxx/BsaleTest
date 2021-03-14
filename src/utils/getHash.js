@@ -1,11 +1,11 @@
 
 const getHash = () => {
-  if (location.hash) {
-    const hash = location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/';
+  if (window.location.hash) {
+    const hash = window.location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/';
 
     return hash;
-  } else if (location.search) {
-    const hash = location.search.slice(1).toLocaleLowerCase() || '/';
+  } else if (window.location.search) {
+    const hash = window.location.search.slice(1).toLocaleLowerCase() || '/';
     return hash;
   }
 };

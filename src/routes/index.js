@@ -11,17 +11,17 @@ const routes = {
 };
 
 const router = async () => {
-  const header = null || document.getElementById('header');
-  const content = null || document.getElementById('cards');
+  const header = document.getElementById('header');
+  const content = document.getElementById('cards');
 
   header.innerHTML = Header();
 
   const hash = getHash();
 
   const route = resolveRoutes(hash);
-
   const render = routes[route] ? routes[route] : Error404;
 
+  content.innerHTML = '<h1> Cargando...</h1>';
   content.innerHTML = await render();
 };
 
