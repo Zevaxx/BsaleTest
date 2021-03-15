@@ -1,6 +1,8 @@
 import getData from '../utils/getData';
 import getHash from '../utils/getHash';
 
+// Este modulo se carga cuando se filtran los productos por categorias
+
 const Category = async () => {
   const busqueda = getHash();
   const productos = await getData(`productos/category?${busqueda}`);

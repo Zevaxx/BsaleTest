@@ -6,12 +6,15 @@ import Error404 from '../pages/Error404';
 import Category from '../pages/Category';
 import Search from '../pages/Search';
 
+// enrutador de la SPA
+
 const routes = {
   '/': Home,
   '/search': Search,
   '/category': Category
 };
 
+// Esta parte renderiza las distintas partes de la SPA dependiendo de las rutas
 const router = async () => {
   const header = document.getElementById('header');
   const content = document.getElementById('cards');

@@ -1,3 +1,5 @@
+// este modulo de conecta con la base de datos disponibilizada en la API
+
 const API = 'https://bsaleapitest.herokuapp.com/api/';
 
 const getData = async (id) => {

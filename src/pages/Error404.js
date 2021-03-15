@@ -1,3 +1,5 @@
+// Este modulo se carga cuando ocurre alguna ruta no válida
+
 const Error404 = () => {
   const view = `
     <div class="Error404">

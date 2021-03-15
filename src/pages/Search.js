@@ -1,6 +1,8 @@
 import getData from '../utils/getData';
 import getHash from '../utils/getHash';
 
+// modulo que se carga cuando se buscan productos
+
 const Search = async () => {
   const busqueda = getHash();
   const productos = await getData(`productos/search?${busqueda}`);

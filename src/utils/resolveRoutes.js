@@ -1,4 +1,6 @@
 
+// Este controlador resuelve las rutas y envia de vuelta las rutas válidas al archivo router
+
 const resolveRoutes = (route) => {
   if (route === '/') {
     const validRoute = '/';

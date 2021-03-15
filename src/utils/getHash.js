@@ -1,3 +1,4 @@
+// esta función obtiene la información desde la barra de direcciones.
 
 const getHash = () => {
   if (window.location.hash) {
