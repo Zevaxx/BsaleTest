@@ -18,9 +18,14 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  },"eslintConfig": {
+  },
+  "eslintConfig": {
     "extends": [
       "./node_modules/semistandard/eslintrc.json"
     ]
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.13.10"
   }
 }

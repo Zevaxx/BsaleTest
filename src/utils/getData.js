@@ -1,4 +1,4 @@
-const API = 'http://localhost:3000/api/productos/';
+const API = 'http://localhost:3000/api/';
 
 const getData = async (id) => {
   const apiURl = id ? `${API}${id}` : API;

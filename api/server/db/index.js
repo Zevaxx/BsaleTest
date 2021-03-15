@@ -10,7 +10,7 @@ const pool = mysql.createPool({
 
 const bsaledb = {};
 
-bsaledb.all = () => {
+bsaledb.productos = () => {
   return new Promise((resolve, reject) => {
     pool.query('SELECT * FROM product;', (err, results) => {
       if (err) {
@@ -23,8 +23,38 @@ bsaledb.all = () => {
 
 bsaledb.search = (buscar) => {
   return new Promise((resolve, reject) => {
-    const like = '%' + buscar + '%';
+    const like = `%${buscar}%`;
     pool.query('Select * FROM product where name like ? ;', like, (err, results) => {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(results);
+    });
+  });
+};
+
+bsaledb.categories = () => {
+  return new Promise((resolve, reject) => {
+    pool.query(`
+      select DISTINCT category.name , category.id 
+      from product
+      inner join category
+      on product.category = category.id;`, (err, results) => {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(results);
+    });
+  });
+};
+
+bsaledb.selectCategory = (filtro) => {
+  return new Promise((resolve, reject) => {
+    const category = `${filtro}`;
+    pool.query(`
+    select *
+    from product
+    where category = ? ;`, category, (err, results) => {
       if (err) {
         return reject(err);
       }

@@ -1,9 +1,9 @@
 import getData from '../utils/getData';
 import getHash from '../utils/getHash';
 
-const Search = async () => {
+const Category = async () => {
   const busqueda = getHash();
-  const productos = await getData(`productos/search?${busqueda}`);
+  const productos = await getData(`productos/category?${busqueda}`);
   const view = `
     ${productos.map(producto => `
     <div class="cards__card">
@@ -16,4 +16,4 @@ const Search = async () => {
   return view;
 };
 
-export default Search;
+export default Category;
