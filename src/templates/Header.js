@@ -7,7 +7,7 @@ const Header = async () => {
   const categories = await getData('productos/categorias');
 
   const view = `
-  <a class="header__homelink"  href=${window.location.origin}><h1 class="header__title">Bsale Test</h1></a>
+  <a class="header__homelink"  href=${window.location.origin}/BsaleTest><h1 class="header__title">Bsale Test</h1></a>
  
     <form method="get" class="header__form" >
       <input class="header__input" type="text" placeholder="Tienda" name="search">
