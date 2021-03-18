@@ -4,8 +4,8 @@ const Home = async () => {
   const pages = window.location.search.slice(1).split('&')[0].split('=')[1];
   const productos = await getData(`productos?page=${pages || 1}`);
 
-  // Este modlulo muestra todos los productos
-  // se agrega paginación y cartas con productos
+  /** Este módulo muestra todos los productos
+   * paginados, cada tarjeta de producto tiene todos los datos obtenidos de la BD */
 
   const view = `
     <div class="pagination"> 

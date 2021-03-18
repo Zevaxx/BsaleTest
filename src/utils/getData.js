@@ -1,4 +1,7 @@
-// este modulo de conecta con la base de datos disponibilizada en la API
+
+/** Conexión con la api, a esta función se le entrega la ruta de la api
+ * para conectarse con el end point que corresponda y obetener la información
+ * que se renderizará en cada módulo */
 
 const API = 'https://bsaleapitest.herokuapp.com/api/';
 

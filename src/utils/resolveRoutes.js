@@ -1,5 +1,6 @@
 
-// Este controlador resuelve las rutas y envia de vuelta las rutas válidas al archivo router
+/** Este controlador toma la información en bruto de la URL
+ * y envia de vuelta las rutas válidas al modulo routes */
 
 const resolveRoutes = (route) => {
   if (route === '/') {

@@ -1,5 +1,7 @@
 const mysql = require('mysql');
 
+/**  Pool con los datos de conexión a la base de datos */
+
 const pool = mysql.createPool({
   user: 'bsale_test',
   database: 'bsale_test',
@@ -9,6 +11,8 @@ const pool = mysql.createPool({
 });
 
 const bsaledb = {};
+
+/** función que trae todos los productos de la base de datos */
 
 bsaledb.productos = () => {
   return new Promise((resolve, reject) => {
@@ -21,6 +25,8 @@ bsaledb.productos = () => {
   });
 };
 
+/** Función que permite buscar productos por los nombres in DB */
+
 bsaledb.search = (buscar) => {
   return new Promise((resolve, reject) => {
     const like = `%${buscar}%`;
@@ -32,6 +38,8 @@ bsaledb.search = (buscar) => {
     });
   });
 };
+
+/** Función que trae las categorías de los productos, deja fuera categorias que no tengan productos */
 
 bsaledb.categories = () => {
   return new Promise((resolve, reject) => {
@@ -47,6 +55,8 @@ bsaledb.categories = () => {
     });
   });
 };
+
+/** Función que selecciona los productos de una categoria desde la base de datos */
 
 bsaledb.selectCategory = (filtro) => {
   return new Promise((resolve, reject) => {

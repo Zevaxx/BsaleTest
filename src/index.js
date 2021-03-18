@@ -1,6 +1,8 @@
 import router from './routes';
 
-// Acá comienza la aplicación, será una SPA
+/** Carga de event listener que montarán los módulos de la aplicación
+ * dependiendo de la interacción del usuario
+ */
 
 window.addEventListener('load', router);
 window.addEventListener('hashchange', router);

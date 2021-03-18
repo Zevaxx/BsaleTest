@@ -1,7 +1,7 @@
 import getData from '../utils/getData';
 
-// Este componente es el header de la aplicación,
-// tiene un buscador y un filtro por categoria
+/** Componente Header de la aplicación
+ * tiene un buscador y un filtro por categoria */
 
 const Header = async () => {
   const categories = await getData('productos/categorias');
