@@ -1,6 +1,6 @@
 
 const path = () => {
-  const PATH = '';
+  const PATH = 'BsaleTest/';
   return PATH;
 };
 
