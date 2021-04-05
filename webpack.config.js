@@ -14,7 +14,11 @@ module.exports = {
         test: /\.js?$/,
         exclude: [/node_modules/, /api/],
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-runtime']
+          }
         }
       }]
   },
@@ -28,10 +32,10 @@ module.exports = {
     ),
     new CopyWebpackPlugin({
       patterns:
-            [{
-              from: './src/styles/estilos.css',
-              to: ''
-            }]
+        [{
+          from: './src/styles/estilos.css',
+          to: ''
+        }]
     })
   ]
 };
