@@ -17,7 +17,7 @@ const Home = async () => {
     </div>
     ${productos.results.map(producto => Card(producto)).join('')}
     <div class='pagination'>
-    ${productos.previous ? `<a class="pagination__prev" href=${window.location.origin}/#page=${productos.previous.page}>Anterior</a>` : ''}
+    ${productos.previous ? `<a class="pagination__prev" href=${window.location.origin}/${path()}#page=${productos.previous.page}>Anterior</a>` : ''}
     ${pages ? `<div class="pagination__current">${pages}</div>` : ''}
     ${productos.next ? `<a class="pagination__next" href= ${window.location.origin}/${path()}#page=${productos.next.page}>Siguiente</a>` : ''}
     </div>`;
