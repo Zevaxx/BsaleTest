@@ -61,9 +61,9 @@ body {
   margin-left: 15px;
 }
 
-.header__searchbutton:hover {
+/* .header__searchbutton:hover {
   cursor: pointer;
-}
+} */
 
 .header__cartbutton {
   display: flex;
@@ -160,7 +160,7 @@ body {
 
 /* Estilo de los botones de navegación */
 
-.pagination{
+.pagination {
   display: flex;
   width: 100%;
   justify-content: center;
